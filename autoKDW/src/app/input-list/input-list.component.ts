@@ -2,6 +2,7 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Component, ChangeDetectorRef } from '@angular/core';
+
 @Component({
   selector: 'app-input-list',
   standalone: true,
@@ -14,7 +15,6 @@ export class InputListComponent {
     private formBuilder: FormBuilder,
     private cdRef: ChangeDetectorRef
   ) {}
-  name = new FormControl('');
 
   profileForm = this.formBuilder.group({
     firstName: ['', Validators.required],
