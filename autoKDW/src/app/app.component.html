@@ -1,8 +1,8 @@
 <h1>{{title}}</h1>
 
 <div class="container">
-    <div class="comp1"><app-input-list></app-input-list></div>
+    <div class="comp1"><app-input-list #inputlist></app-input-list></div>
     <div class="comp2"><app-choose-argument-type></app-choose-argument-type></div>
-
 </div>
 <div class="comp3"><app-custom-motivation></app-custom-motivation></div>
+<button type="submit" [disabled]="!inputListComponentRef.profileForm.valid" (click)="onSubmit()">Generate KDW</button>

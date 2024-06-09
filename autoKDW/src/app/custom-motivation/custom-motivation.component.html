@@ -1,6 +1,11 @@
 <div>
     <h2>Custom Motivation</h2>
-    <label for="street">(Hint: use only a few sentences. Be precise. ) </label>
-    <textarea></textarea> 
+    <form [formGroup]="textAreaForm">
+        <div class="sub-heading">Text Area Input Field</div>
+        <textarea cols="64" rows="10" class="tesxt-area" formControlName="textArea"></textarea>
+    </form>
 
 </div>
+
+
+Value: {{textAreaForm.get("textArea")?.value}}

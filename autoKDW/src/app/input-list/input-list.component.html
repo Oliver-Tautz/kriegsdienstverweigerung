@@ -1,7 +1,7 @@
 
 <div>
-<h2>Group Form</h2>
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<h2>Personal Info</h2>
+<form [formGroup]="profileForm">
 
     <label for="last-name">Last Name: </label>
     <input id="last-name" type="text" formControlName="lastName">
@@ -30,8 +30,6 @@
     <input id="post-code" type="text" formControlName="postCode">
 </div>
 </form>
-<p>Complete the form to enable button.</p>
-<button type="submit" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
-<button type="button" (click)="updateProfile()">Update Profile</button>
-<p>Form Status: {{ profileForm.status }}</p>
 </div>
+
+

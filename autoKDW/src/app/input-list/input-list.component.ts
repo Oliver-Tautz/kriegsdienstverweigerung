@@ -1,7 +1,17 @@
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
-import { Validators } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
-import { Component, ChangeDetectorRef } from '@angular/core';
+import {
+  FormGroup,
+  FormControl,
+  ReactiveFormsModule,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
+
+import {
+  Component,
+  ChangeDetectorRef,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 @Component({
   selector: 'app-input-list',
@@ -42,9 +52,7 @@ export class InputListComponent {
     });
     this.cdRef.detectChanges();
   }
-
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+  ngOnInit() {
+    console.log('InputListComponent initialized');
   }
 }
